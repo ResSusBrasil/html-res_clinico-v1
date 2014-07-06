@@ -1,4 +1,11 @@
-res_clinico-v1
+Sumário de Alta Hospitalar
 ==============
 
-Protótipo funcional do RES Clínico Versão 1.0 (Apenas camada View)
+O propósito do Sumário de Alta Hospitalar é o de comunicar de forma resumida as informações clínicas mais relevantes de um episódio de cuidado de doenças agudas ou agudizações de doenças pré-existentes em unidade de cuidados secundários: hospital, hospital dia, internação domiciliar ou em setor de emergência, quando de sua conclusão com o objetivo de prover informações acuradas e oportunas para a equipe ou profissional que vai dar seguimento ao tratamento do paciente, possibilitando com isso a continuidade do cuidado do paciente.
+Portanto, tratase de um relatório clínico resumido elaborado por um médico ou outro profissional por ocasião do término do período de internação, conclusão de uma série de tratamentos feitos em nível hospitalar, incluindo emergência, hospital dia e internação domiciliar. Ele contém informações sobre motivo da admissão, diagnósticos e outros achados importantes, exames realizados e tratamentos administrados, resposta e eventuais reações do paciente aos tratamentos administrados, intercorrências clínicas, prognóstico e conduta e recomendações escritas para seguimento pós-alta.
+ A Comissão de Estudo Especial de Informática em Saúde (CEE-IS),propos o conteúdo de informação para compor o Sumário de Alta Hospitalar, com o principal objetivo de garantir a continuidade da assistência.
+Em agosto de 2011, o Ministério da Saúde publicou a Portaria 2073 que regulamenta o uso de padrões de interoperabilidade e informação em saúde para sistemas de informação em saúde no âmbito do Sistema Único de Saúde. Esta portaria visa, entre 
+outros objetivos, apoiar a implementação de um Registro Eletrônico de Saúde (RES) nacional e longitudinal [12]. A CEE-IS ciente deste processo vem a oferecer sua contribuição através da proposta de conteúdo de informação do Sumário de Alta 
+Hospitalar. Esta proposta está organizada em dois documentos:
+- Sumário de Alta Hospitalar – Parte 1: Modelo de Informação – este documento apresenta o modelo de informação com a descrição de todos os componentes que devem fazer parte do Sumário de Alta;
+- Sumário de Alta Hospitalar – Parte 2: Modelo Computacional – a segunda parte desta proposta, ainda a ser elaborada, evidenciará as interfaces computacionais para que se estabeleça a interoperabilidade entre os sistemas de informação em saúde no País. Os padrões computacionais a serem adotados serão aqueles já descritos na Portaria.
