@@ -55,7 +55,11 @@
 	
 	<!-- LESS 2 CSS -->
 	<script src="theme/scripts/less-1.3.3.min.js"></script>
-	
+	<style>
+		#notyfy_container_bottomLeft{
+			display:none;
+		}
+	</style>
 	
 	<!--[if IE]><script type="text/javascript" src="theme/scripts/excanvas/excanvas.js"></script><![endif]-->
 	<!--[if lt IE 8]><script type="text/javascript" src="theme/scripts/json2.js"></script><![endif]-->
@@ -63,7 +67,7 @@
 <body>
 	
 	<!-- Start Content -->
-	<div class="container-fluid fixed">
+	<div class="container-fluid fluid">
 		
 		<div class="navbar main">
 			<a href="index.html?lang=en" class="appbrand"><span>SA+ <span>versão 1.0</span></span></a>
@@ -75,126 +79,132 @@
 			<ul class="topnav pull-right">
 				<li class="visible-desktop">
 					<ul class="notif">
-						<li><a href="" class="glyphicons envelope" data-toggle="tooltip" data-placement="bottom" data-original-title="5 new messages"><i></i> 5</a></li>
-						<li><a href="" class="glyphicons shopping_cart" data-toggle="tooltip" data-placement="bottom" data-original-title="1 new orders"><i></i> 1</a></li>
-						<li><a href="" class="glyphicons log_book" data-toggle="tooltip" data-placement="bottom" data-original-title="3 new activities"><i></i> 3</a></li>
+						<li><a href="" class="glyphicons envelope" data-toggle="tooltip" data-placement="bottom" data-original-title="5 novas mensagens"><i></i> 5</a></li>
+						<li><a href="" class="glyphicons heart" data-toggle="tooltip" data-placement="bottom" data-original-title="1 novos procedimentos"><i></i> 1</a></li>
+						<li><a href="" class="glyphicons log_book" data-toggle="tooltip" data-placement="bottom" data-original-title="3 novas atividades"><i></i> 3</a></li>
 					</ul>
 				</li>
 				<li class="dropdown visible-desktop">
-					<a href="" data-toggle="dropdown" class="glyphicons cogwheel"><i></i>Dropdown <span class="caret"></span></a>
+					<a href="" data-toggle="dropdown" class="glyphicons cogwheel"><i></i>Configurações <span class="caret"></span></a>
 					<ul class="dropdown-menu pull-right">
-						<li><a href="">Some option</a></li>
-						<li><a href="">Some other option</a></li>
-						<li><a href="">Other option</a></li>
+						<li><a href="">Conta</a></li>
+						<li><a href="">Perfil</a></li>
+						<li><a href="">Outras Opções</a></li>
 					</ul>
 				</li>
-								<li class="hidden-phone">
-					<a href="#themer" data-toggle="collapse" class="glyphicons eyedropper"><i></i><span>Themer</span></a>
+				<li class="hidden-phone">
+					<a href="#themer" data-toggle="collapse" class="glyphicons tint"><i></i><span>Cores</span></a>
 					<div id="themer" class="collapse">
 						<div class="wrapper">
-							<span class="close2">&times; close</span>
-							<h4>Themer <span>color options</span></h4>
+							<span class="close2">&times; fechar</span>
+							<h4>Cores <span>opções de cores</span></h4>
 							<ul>
-								<li>Theme: <select id="themer-theme" class="pull-right"></select><div class="clearfix"></div></li>
-								<li>Primary Color: <input type="text" data-type="minicolors" data-default="#ffffff" data-slider="hue" data-textfield="false" data-position="left" id="themer-primary-cp" /><div class="clearfix"></div></li>
+								<li>Tema: <select id="themer-theme" class="pull-right"></select><div class="clearfix"></div></li>
+								<li>Cor Primária: <input type="text" data-type="minicolors" data-default="#ffffff" data-slider="hue" data-textfield="false" data-position="left" id="themer-primary-cp" /><div class="clearfix"></div></li>
 								<li>
-									<span class="link" id="themer-custom-reset">reset theme</span>
+									<span class="link" id="themer-custom-reset">reset tema</span>
 									<span class="pull-right"><label>advanced <input type="checkbox" value="1" id="themer-advanced-toggle" /></label></span>
 								</li>
 							</ul>
 							<div id="themer-getcode" class="hide">
 								<hr class="separator" />
-								<button class="btn btn-primary btn-small pull-right btn-icon glyphicons download" id="themer-getcode-less"><i></i>Get LESS</button>
-								<button class="btn btn-inverse btn-small pull-right btn-icon glyphicons download" id="themer-getcode-css"><i></i>Get CSS</button>
+								<button class="btn btn-primary btn-small pull-right btn-icon glyphicons download" id="themer-getcode-less"><i></i>Baixar LESS</button>
+								<button class="btn btn-inverse btn-small pull-right btn-icon glyphicons download" id="themer-getcode-css"><i></i>Baixar CSS</button>
 								<div class="clearfix"></div>
 							</div>
 						</div>
 					</div>
 				</li>
-								<li class="hidden-phone">
-					<a href="#" data-toggle="dropdown"><img src="theme/images/lang/en.png" alt="en" /></a>
-			    	<ul class="dropdown-menu pull-right">
-			      		<li class="active"><a href="?page=index&amp;lang=en" title="English"><img src="theme/images/lang/en.png" alt="English"> English</a></li>
-			      		<li><a href="?page=index&amp;lang=ro" title="Romanian"><img src="theme/images/lang/ro.png" alt="Romanian"> Romanian</a></li>
-			      		<li><a href="?page=index&amp;lang=it" title="Italian"><img src="theme/images/lang/it.png" alt="Italian"> Italian</a></li>
-			      		<li><a href="?page=index&amp;lang=fr" title="French"><img src="theme/images/lang/fr.png" alt="French"> French</a></li>
-			      		<li><a href="?page=index&amp;lang=pl" title="Polish"><img src="theme/images/lang/pl.png" alt="Polish"> Polish</a></li>
-			    	</ul>
-				</li>
 				<li class="account">
-										<a data-toggle="dropdown" href="form_demo.html?lang=en" class="glyphicons logout lock"><span class="hidden-phone text">mosaicpro</span><i></i></a>
+					<a data-toggle="dropdown" href="form_demo.html?lang=en" class="glyphicons logout lock"><span class="hidden-phone text">alfredoneto</span><i></i></a>
 					<ul class="dropdown-menu pull-right">
-						<li><a href="form_demo.html?lang=en" class="glyphicons cogwheel">Settings<i></i></a></li>
-						<li><a href="form_demo.html?lang=en" class="glyphicons camera">My Photos<i></i></a></li>
+						<li><a href="form_demo.html?lang=en" class="glyphicons cogwheel">Configurações<i></i></a></li>
+						<li><a href="form_demo.html?lang=en" class="glyphicons camera">Fotos<i></i></a></li>
 						<li class="highlight profile">
 							<span>
-								<span class="heading">Profile <a href="form_demo.html?lang=en" class="pull-right">edit</a></span>
+								<span class="heading">Perfil <a href="form_demo.html?lang=en" class="pull-right">editar</a></span>
 								<span class="img"></span>
 								<span class="details">
-									<a href="form_demo.html?lang=en">Mosaic Pro</a>
-									contact@mosaicpro.biz
+									<a href="#">Alfredo Neto</a>
+									alfredo.neto@ressus.org.br
 								</span>
 								<span class="clearfix"></span>
 							</span>
 						</li>
 						<li>
 							<span>
-								<a class="btn btn-default btn-small pull-right" style="padding: 2px 10px; background: #fff;" href="login.html?lang=en">Sign Out</a>
+								<a class="btn btn-default btn-small pull-right" style="padding: 2px 10px; background: #fff;" href="login.html?lang=en">Registrar</a>
 							</span>
 						</li>
 					</ul>
-									</li>
+				</li>
 			</ul>
 		</div>
 		
-				<div id="wrapper">
+		<div id="wrapper">
 		<div id="menu" class="hidden-phone">
 			<div id="menuInner">
 				<div id="search">
-					<input type="text" placeholder="Quick search ..." />
+					<input type="text" placeholder="Pesquisa rápida ..." />
 					<button class="glyphicons search"><i></i></button>
 				</div>
-				<ul>
-					<li class="heading"><span>Category</span></li>
-					<li class="glyphicons home active"><a href="index.html?lang=en"><i></i><span>Dashboard</span></a></li>
-					<li class="glyphicons cogwheels"><a href="ui.html?lang=en"><i></i><span>UI Elements</span></a></li>
-					<li class="glyphicons charts"><a href="charts.html?lang=en"><i></i><span>Charts</span></a></li>
+				<ul style="margin-bottom:-2px;">
+					<li class="heading"><span>Paciente</span></li>
+					<li class="glyphicons cogwheels"><a href="paciente_identificacao.html?lang=en"><i></i><span>Identificação</span></a></li>
 					<li class="hasSubmenu">
-						<a data-toggle="collapse" class="glyphicons show_thumbnails_with_lines" href="#menu_forms"><i></i><span>Forms</span></a>
+						<a data-toggle="collapse" class="glyphicons notes_2" href="#menu_consulta"><i></i><span>Consulta</span></a>
+						<ul class="collapse" id="menu_consulta">
+							<li class=""><a href="form_demo.html?lang=en"><span>Pedido</span></a></li>
+						</ul>
+					</li>
+					<li class="hasSubmenu">
+						<a data-toggle="collapse" class="glyphicons adress_book" href="#menu_forms"><i></i><span>Protocolo</span></a>
 						<ul class="collapse" id="menu_forms">
-							<li class=""><a href="form_demo.html?lang=en"><span>My Account</span></a></li>
-							<li class=""><a href="form_elements.html?lang=en"><span>Form Elements</span></a></li>
-							<li class=""><a href="form_validator.html?lang=en"><span>Form Validator</span></a></li>
-							<li class=""><a href="file_managers.html?lang=en"><span>File Managers</span></a></li>
+							<li class=""><a href="form_demo.html?lang=en"><span>Patrocínio</span></a></li>
+							<li class=""><a href="form_elements.html?lang=en"><span>Referência</span></a></li>
+							<li class=""><a href="form_validator.html?lang=en"><span>Contato Paciente</span></a></li>
+							<li class=""><a href="file_managers.html?lang=en"><span>Duração</span></a></li>
 						</ul>
 					</li>
-					<li class="">
-						<a class="glyphicons table" href="tables.html?lang=en"><i></i><span>Tables</span></a>
-					</li>
-					<li class="glyphicons calendar"><a href="calendar.html?lang=en"><i></i><span>Calendar</span></a></li>
-					<li class="glyphicons user"><a href="login.html?lang=en"><i></i><span>Login</span></a></li>
 				</ul>
-				<ul>
-					<li class="heading"><span>Sections</span></li>
-					<li class="glyphicons coins"><a href="finances.html?lang=en"><i></i><span>Finances</span></a></li>
+				<ul style="margin-bottom:-2px;">
+					<li class="heading"><span>Histórico</span></li>
 					<li class="hasSubmenu">
-						<a data-toggle="collapse" class="glyphicons shopping_cart" href="#menu_ecommerce"><i></i><span>Online Shop</span></a>
-						<ul class="collapse" id="menu_ecommerce">
-							<li class=""><a href="products.html?lang=en"><span>Products</span></a></li>
-							<li class=""><a href="product_edit.html?lang=en"><span>Add product</span></a></li>
+						<a data-toggle="collapse" class="glyphicons cardio" href="#menu_historico"><i></i><span>Problema</span></a>
+						<ul class="collapse" id="menu_historico">
+							<li class=""><a href="form_demo.html?lang=en"><span>Declarações</span></a></li>
 						</ul>
 					</li>
-					<li class="glyphicons sort"><a href="pages.html?lang=en"><i></i><span>Site Pages</span></a></li>
-					<li class="glyphicons picture"><a href="gallery.html?lang=en"><i></i><span>Photo Gallery</span></a></li>
-					<li class="glyphicons adress_book"><a href="bookings.html?lang=en"><i></i><span>Bookings</span></a></li>
+					<li class="glyphicons stopwatch"><a href="login.html?lang=en"><i></i><span>Duração</span></a></li>
+					<li class="glyphicons edit"><a href="login.html?lang=en"><i></i><span>Resumo</span></a></li>
+				</ul>
+				<ul style="margin-bottom:-2px;">
+					<li class="heading"><span>Medicação</span></li>
+					<li class="hasSubmenu">
+						<a data-toggle="collapse" class="glyphicons circle_plus" href="#menu_medicacao"><i></i><span>Atividades</span></a>
+						<ul class="collapse" id="menu_medicacao">
+							<li class=""><a href="form_demo.html?lang=en"><span>Procedimentos</span></a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul style="margin-bottom:-2px;">
+					<li class="heading"><span>Laboratorial</span></li>
+					<li class="hasSubmenu">
+						<a data-toggle="collapse" class="glyphicons eyedropper" href="#menu_laboratorial"><i></i><span>Laboratório</span></a>
+						<ul class="collapse" id="menu_laboratorial">
+							<li class=""><a href="products.html?lang=en"><span>Dados</span></a></li>
+						</ul>
+					</li>
+					<li class="glyphicons stopwatch"><a href="finances.html?lang=en"><i></i><span>Exames</span></a></li>
 				</ul>
 			</div>
 		</div>
 		<div id="content">
 		<ul class="breadcrumb">
-	<li><a href="index.html?lang=en" class="glyphicons home"><i></i> AdminPlus</a></li>
+	<li><a href="index.html?lang=en" class="glyphicons home"><i></i> Sumário de Alta</a></li>
 	<li class="divider"></li>
-	<li>Dashboard</li>
+	<li>Paciente</li>
 </ul>
 <div class="separator"></div>
 
@@ -410,27 +420,7 @@
 		</div>
 		
 		<!-- Sticky Footer -->
-		<div id="footer" class="visible-desktop">
-	      	<div class="wrap">
-	      		<ul>
-	      			<li class="dropdown dropup">
-	      				<span data-toggle="dropdown" class="dropdown-toggle glyphicons cogwheel text" title=""><i></i><span class="hidden-phone">Layout Options</span></span>
-	      				<ul class="dropdown-menu pull-left">
-	      					<li class="active"><a href="#" data-toggle="layout" data-layout="fixed" title="">Fixed layout</a></li>
-	      					<li><a href="#" data-toggle="layout" data-layout="fluid" title="">Fluid layout</a></li>
-	      				</ul>
-	      			</li>
-	      			<li class="dropdown dropup">
-	      				<span data-toggle="dropdown" class="dropdown-toggle glyphicons settings text" title=""><i></i><span class="hidden-phone">Menu Options</span></span>
-	      				<ul class="dropdown-menu pull-left">
-	      					<li class="active"><a href="#" data-toggle="menuPosition" data-menuPosition="left-menu" title="">Left menu</a></li>
-	      					<li><a href="#" data-toggle="menuPosition" data-menuPosition="right-menu" title="">Right menu</a></li>
-	      				</ul>
-	      			</li>
-	      			<li><a href="documentation.html?lang=en" class="glyphicons circle_question_mark text" title=""><i></i><span class="hidden-phone">Documentation</span></a></li>
-	      		</ul>
-	      	</div>
-	    </div>
+		<div id="footer" class="visible-desktop"></div>
 				
 	</div>
 	
